@@ -1,0 +1,149 @@
+.header {
+  background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/foodmunch-banner-bg.png");
+  height: 100vh;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.header-text {
+  margin: 10px;
+  gap: 20px;
+  color: white;
+  padding: 10px;
+  max-width: 50%;
+  left: 6vw;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  animation: fadeinout 4s;
+}
+
+@keyframes fadeinout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.header-text h2 {
+  font-size: max(4.5vw, 22px);
+}
+
+.header-text h2 span {
+  color: green;
+}
+
+.title {
+  font-size: max(4.5vw, 22px);
+}
+.title span {
+  color: #28d828;
+}
+
+.header-text p {
+  font-size: 1vw;
+}
+
+.header-button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.header-button-container button {
+  background-color: #28d828;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  padding: 0 20px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.header-button-container button:hover {
+  background-color: darkgreen;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1024px) {
+  .header-text {
+    max-width: 70%; /* Adjust max-width for tablets */
+    left: 5vw;
+  }
+
+  .header-text h2 {
+    font-size: max(5vw, 24px); /* Adjust font size for tablets */
+  }
+
+  .title {
+    font-size: max(5vw, 24px); /* Adjust font size for tablets */
+  }
+
+  .header-text p {
+    font-size: 1.2vw; /* Adjust font size for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: auto; /* Allow height to adjust for smaller screens */
+    padding: 20px 5%; /* Adjust padding */
+  }
+
+  .header-text {
+    max-width: 90%; /* Increase max-width for smaller screens */
+    left: auto;
+    position: relative;
+    text-align: center; /* Center-align text for small screens */
+  }
+
+  .header-text h2 {
+    font-size: max(6vw, 20px); /* Adjust font size for small screens */
+  }
+
+  .title {
+    font-size: max(6vw, 20px); /* Adjust font size for small screens */
+  }
+
+  .header-text p {
+    font-size: 1.5vw; /* Adjust font size for small screens */
+  }
+
+  .header-button-container {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Adjust gap between buttons */
+    align-items: center; /* Center-align buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  .header-text {
+    padding: 10px; /* Adjust padding for very small screens */
+  }
+
+  .header-text h2 {
+    font-size: max(7vw, 18px); /* Adjust font size for very small screens */
+  }
+
+  .title {
+    font-size: max(7vw, 18px); /* Adjust font size for very small screens */
+  }
+
+  .header-text p {
+    font-size: 2vw; /* Adjust font size for very small screens */
+  }
+
+  .header-button-container button {
+    font-size: 0.9rem; /* Adjust button font size for very small screens */
+  }
+}

@@ -1,0 +1,85 @@
+/* Default input field style */
+/* input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: transparent;
+  color: white;
+}
+
+
+input::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+input:valid {
+  background-color: transparent;
+}
+
+input:focus:valid {
+  background-color: transparent;
+}
+*/
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+.login-inputs-fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-inputs-fields input {
+  border: none;
+  margin-top: 10px;
+  height: 40px;
+  width: auto;
+  border-bottom: 1px solid #28d828;
+  outline: none;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+}
+.login-form-input {
+  border: none;
+}
+.login-buttons {
+  border: none;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+}
+.login-buttons:hover {
+  color: #28d828;
+  border-bottom: 1px solid #28d828;
+}
+.login-submit {
+  margin: 5px;
+}
+.blur-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

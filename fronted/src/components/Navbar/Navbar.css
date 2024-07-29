@@ -1,0 +1,255 @@
+body,
+html {
+  margin: 2px;
+  padding: 2px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 98%;
+  box-sizing: border-box;
+}
+
+.food-munch-image {
+  flex: 1;
+}
+
+.food-munch-logo {
+  height: 80px;
+  width: 100px;
+}
+
+.nav-categories {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-categories a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-size: 18px;
+}
+
+.nav-categories a:hover {
+  color: #28d828; /* Color on hover */
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.profile-popup li:hover {
+  color: #28d828;
+}
+
+.icons,
+.profile-button {
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 24px;
+  transition: color 0.3s ease;
+  position: relative; /* Ensure position relative for cart count */
+}
+
+.icons:hover,
+.profile-button:hover {
+  color: #28d828;
+}
+
+.contact-us {
+  background-color: #28d828; /* Background color */
+  color: #fff; /* Text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-count {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  position: absolute; /* Position absolute for cart count */
+  top: -10px; /* Adjust to position the count above the icon */
+  right: -10px; /* Adjust to position the count to the right of the icon */
+}
+
+.contact-us a {
+  color: #fff; /* Text color inside the button */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-us:hover {
+  background-color: #1e8a1e; /* Darker shade on hover */
+}
+.login-checkbox {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+  .nav-categories {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+  .na .profile-popup {
+    position: absolute;
+    top: 100%; /* Position below the profile button */
+    right: 0;
+    background-color: #fff; /* Or your preferred background color */
+    border: 1px solid #ddd; /* Optional */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional */
+    padding: 15px; /* Adjust padding as needed */
+    margin-top: 5px; /* Adjust margin to ensure spacing */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+    width: 200px; /* Adjust width as needed */
+    display: none; /* Hidden by default */
+  }
+
+  .profile-popup.open {
+    display: flex;
+  }
+
+  .profile-popup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .profile-popup li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 8px 0; /* Padding for each item */
+  }
+
+  .profile-popup li img {
+    width: 20px; /* Adjust size as needed */
+  }
+
+  .profile-popup li p {
+    margin: 0;
+    font-size: 14px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  /* .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+  } */
+
+  .nav-categories {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .navbar {
+    position: relative;
+  }
+
+  .nav-categories-open {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .profile-popup {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+    width: 200px;
+    display: none;
+  }
+
+  .profile-popup.open {
+    display: flex; /* Show when open */
+  }
+
+  .profile-popup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .profile-popup li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 8px 0; /* Padding for each item */
+  }
+
+  .profile-popup li img {
+    width: 20px; /* Adjust size as needed */
+  }
+
+  .profile-popup li p {
+    margin: 0;
+    font-size: 14px; /* Adjust font size as needed */
+  }
+
+  .contact-us {
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+
+  .food-munch-logo {
+    height: 60px;
+    width: 70px;
+  }
+}
