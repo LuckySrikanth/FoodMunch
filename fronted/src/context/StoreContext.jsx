@@ -7,7 +7,7 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
   const [token, setToken] = useState("");
-  const url = "http://localhost:5000";
+  const url = "https://foodmunch-backend.onrender.com";
 
   const AddToCart = async (itemId) => {
     if (!cartItems[itemId]) {
