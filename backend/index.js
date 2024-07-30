@@ -11,7 +11,6 @@ const app = express();
 
 
 dotenv.config();
-const app = express();
 app.use(express.json());
 
 // CORS configuration
