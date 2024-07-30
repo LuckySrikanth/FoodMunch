@@ -4,7 +4,11 @@ const orderRouter = require("./Routes/orderRoute");
 const { connectDb } = require("./config/db");
 const cartRoute = require("./Routes/cartRoute");
 const dotenv = require("dotenv");
+<<<<<<< HEAD
 const cors = require("cors");
+=======
+const app = express();
+>>>>>>> 66679914878506727c39eb87328e30ad811beb96
 
 dotenv.config();
 const app = express();
