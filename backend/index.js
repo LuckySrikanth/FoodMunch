@@ -4,11 +4,11 @@ const orderRouter = require("./Routes/orderRoute");
 const { connectDb } = require("./config/db");
 const cartRoute = require("./Routes/cartRoute");
 const dotenv = require("dotenv");
-<<<<<<< HEAD
+
 const cors = require("cors");
-=======
+
 const app = express();
->>>>>>> 66679914878506727c39eb87328e30ad811beb96
+
 
 dotenv.config();
 const app = express();
@@ -16,14 +16,14 @@ app.use(express.json());
 
 // CORS configuration
 const corsOptions = {
-  origin: "https://foodmunch-backend.onrender.com3", // Replace with your frontend domain
+  origin: "https://foodmunch-backend.onrender.com", 
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
 };
 
 app.use(cors(corsOptions));
-app.options("*", cors(corsOptions)); // Handle preflight requests
+app.options("*", cors(corsOptions)); 
 
 // Connect to the database
 connectDb();
