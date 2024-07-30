@@ -9,7 +9,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 //placing user order for fronted
 exports.placeOrder = async (req, res) => {
   console.log(req.body);
-  const fronted_url = "http://localhost:5173";
+  const fronted_url = "https://foodmunch-fronted.onrender.com";
   try {
     const newOrder = new orderModel({
       userId: req.body.userId,
