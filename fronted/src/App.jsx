@@ -23,7 +23,6 @@ const App = () => {
         <Route path="/placeorder" element={<PlaceOrder />} />
         <Route path="/verify" element={<Verify />} />
         <Route path="/myorders" element={<MyOrders />} />
-        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </div>

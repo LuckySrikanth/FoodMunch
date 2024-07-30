@@ -5,6 +5,8 @@ const { connectDb } = require("./config/db");
 const cartRoute = require("./Routes/cartRoute");
 const dotenv = require("dotenv");
 const app = express();
+const cors = require("cors");
+app.use(cors());
 
 dotenv.config();
 app.use(express.json());

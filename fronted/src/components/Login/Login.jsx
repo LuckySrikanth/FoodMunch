@@ -15,7 +15,8 @@ const Login = ({ setShowLogin }) => {
   });
 
   const inputHandler = (e) => {
-    const { name, value } = e.target;
+    const name = e.target.name;
+    const value = e.target.value;
     setUserDetails((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -28,14 +29,27 @@ const Login = ({ setShowLogin }) => {
       newUrl += "/user/postUser";
     }
 
-    const response = await axios.post(newUrl, userDetails);
-    if (response.data.success) {
-      setToken(response.data.token);
-      localStorage.setItem("token", response.data.token);
-      setShowLogin(false);
-    } else {
-      console.log(response.data.message);
-      alert(response.data.message);
+    try {
+      const response = await axios.post(newUrl, userDetails);
+      if (response.data.success) {
+        setToken(response.data.token);
+        localStorage.setItem("token", response.data.token);
+        setShowLogin(false);
+      } else {
+        console.log(response.data.message);
+        alert(response.data.message);
+      }
+    } catch (error) {
+      if (error.response) {
+        console.error("Error response data:", error.response.data);
+        alert(`Error: ${error.response.data.message || error.message}`);
+      } else if (error.request) {
+        console.error("Error request data:", error.request);
+        alert("No response received from the server.");
+      } else {
+        console.error("Error message:", error.message);
+        alert("An error occurred while setting up the request.");
+      }
     }
   };
 
@@ -122,5 +136,4 @@ const Login = ({ setShowLogin }) => {
     </div>
   );
 };
-
 export default Login;

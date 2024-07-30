@@ -15,8 +15,8 @@ html {
   background-color: #fff;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 98%;
+  /* box-shadow: 0 2px 5px rgba(232, 231, 231, 0.1); */
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -112,86 +112,22 @@ html {
   margin-bottom: 10px;
 }
 
-/* Desktop view */
-@media (min-width: 768px) {
-  .nav-categories {
-    display: flex;
-  }
-
-  .menu-icon {
-    display: none;
-  }
-  .na .profile-popup {
-    position: absolute;
-    top: 100%; /* Position below the profile button */
-    right: 0;
-    background-color: #fff; /* Or your preferred background color */
-    border: 1px solid #ddd; /* Optional */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional */
-    padding: 15px; /* Adjust padding as needed */
-    margin-top: 5px; /* Adjust margin to ensure spacing */
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    z-index: 1000;
-    width: 200px; /* Adjust width as needed */
-    display: none; /* Hidden by default */
-  }
-
-  .profile-popup.open {
-    display: flex;
-  }
-
-  .profile-popup ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .profile-popup li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    padding: 8px 0; /* Padding for each item */
-  }
-
-  .profile-popup li img {
-    width: 20px; /* Adjust size as needed */
-  }
-
-  .profile-popup li p {
-    margin: 0;
-    font-size: 14px;
-  }
-}
-
 /* Mobile view */
-@media (max-width: 768px) {
-  /* .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    width: 100%;
-  } */
-
+@media (max-width: 767px) {
   .nav-categories {
     display: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    padding: 10px;
     flex-direction: column;
-    gap: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 12.6%;
+    right: -38px;
+    background-color: #fff;
+    width: 100%;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    padding: 10px;
+    z-index: 100;
   }
-  /* .navbar {
-    position: relative;
-  } */
 
-  .nav-categories-open {
+  .nav-categories.nav-categories-open {
     display: flex;
   }
 
@@ -199,24 +135,23 @@ html {
     display: block;
   }
 
-  .profile-popup {
+  .navbar-profile .profile-popup {
+    display: none;
     position: absolute;
-    top: 60px;
+    top: 12%;
     right: 0;
     background-color: #fff;
     border: 1px solid #ddd;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 15px;
     margin-top: 5px;
-    display: flex;
     flex-direction: column;
     gap: 10px;
     z-index: 1000;
     width: 200px;
-    display: none;
   }
 
-  .profile-popup.open {
+  .navbar-profile .profile-popup.open {
     display: flex; /* Show when open */
   }
 
@@ -231,25 +166,70 @@ html {
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    padding: 8px 0; /* Padding for each item */
+    padding: 8px 0;
   }
 
   .profile-popup li img {
-    width: 20px; /* Adjust size as needed */
+    width: 20px;
   }
 
   .profile-popup li p {
     margin: 0;
-    font-size: 14px; /* Adjust font size as needed */
+    font-size: 14px;
+  }
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+  .nav-categories {
+    display: flex;
   }
 
-  .contact-us {
-    padding: 8px 10px;
-    font-size: 10px;
+  .menu-icon {
+    display: none;
   }
 
-  .food-munch-logo {
-    height: 60px;
-    width: 70px;
+  .navbar-profile .profile-popup {
+    position: absolute;
+    top: 19.5%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+    width: 200px;
+    display: none; /* Hidden by default */
+  }
+
+  .navbar-profile .profile-popup.open {
+    display: flex; /* Show when open */
+  }
+
+  .profile-popup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .profile-popup li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 8px 0;
+  }
+
+  .profile-popup li img {
+    width: 20px;
+  }
+
+  .profile-popup li p {
+    margin: 0;
+    font-size: 14px;
   }
 }
