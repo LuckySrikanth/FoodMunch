@@ -24,7 +24,7 @@ const Header = () => {
           <a href="#explore-menu">
             <button className="header-view-button">View Menu</button>
           </a>
-          <a href="#food-display>
+          <a href="#food-display">
           <button className="header-view-button">Order Now</button>
         </a>
         </div>
