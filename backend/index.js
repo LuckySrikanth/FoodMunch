@@ -17,7 +17,7 @@ app.use(express.json());
 const corsOptions = {
   origin: "https://foodmunch-fronted.onrender.com", 
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
+  allowedHeaders: ["Content-Type", "Authorization","token"],
   credentials: true,
 };
 
