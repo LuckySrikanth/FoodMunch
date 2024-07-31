@@ -15,7 +15,7 @@ app.use(express.json());
 
 // CORS configuration
 const corsOptions = {
-  origin: "https://foodmunch-backend.onrender.com", 
+  origin: "https://foodmunch-fronted.onrender.com", 
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
