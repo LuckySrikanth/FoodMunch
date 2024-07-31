@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 import "./Cart.css";
 
 const Cart = () => {
-  const { cartItems, getTotalCartAmount } = useContext(StoreContext);
+  const { cartItems, getTotalCartAmount, removeFromCartHandler } =
+    useContext(StoreContext);
   const navigate = useNavigate();
 
   return (
@@ -32,7 +33,7 @@ const Cart = () => {
                   <p>{cartItems[item._id]}</p>
                   <p>${item.price * cartItems[item._id]}</p>
                   <button
-                    onClick={() => removeFromCart(item._id)}
+                    onClick={() => removeFromCartHandler(item._id)}
                     className="cross"
                   >
                     X
