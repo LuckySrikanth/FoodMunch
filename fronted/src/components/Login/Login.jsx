@@ -34,21 +34,21 @@ const Login = ({ setShowLogin }) => {
       if (response.data.success) {
         setToken(response.data.token);
         localStorage.setItem("token", response.data.token);
+        // showNotification("Login successful!", "success", true);
         setShowLogin(false);
       } else {
-        console.log(response.data.message);
-        alert(response.data.message);
+        // showNotification(response.data.message || "Error", "error", false);
       }
     } catch (error) {
       if (error.response) {
-        console.error("Error response data:", error.response.data);
-        alert(`Error: ${error.response.data.message || error.message}`);
+        showNotification(
+          `Error: ${error.response.data.message || error.message}`,
+          "error"
+        );
       } else if (error.request) {
-        console.error("Error request data:", error.request);
-        alert("No response received from the server.");
+        showNotification("No response received from the server.", "error");
       } else {
-        console.error("Error message:", error.message);
-        alert("An error occurred while setting up the request.");
+        alert("An error occurred while setting up the request.", "error");
       }
     }
   };
@@ -136,4 +136,5 @@ const Login = ({ setShowLogin }) => {
     </div>
   );
 };
+
 export default Login;

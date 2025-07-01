@@ -25,7 +25,7 @@ const SurpriseGift = () => {
             </div>
             <div>
               <img
-                src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/gift-voucher-img.png"
+                src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/gift-voucher-img.png"
                 className="suprise-gift-vocher-image"
               />
             </div>
@@ -37,8 +37,8 @@ const SurpriseGift = () => {
       )}
       <div className="suprise-gift-image-container">
         <img
-          src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png"
-          alt=""
+          src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png"
+          alt="supriseGiftImage"
           className="suprise-gift-image"
         />
       </div>

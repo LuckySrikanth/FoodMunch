@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-content-left">
           <img
-            src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/food-munch-img.png"
+            src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/food-munch-img.png"
             alt="Logo"
             className="logo"
           />

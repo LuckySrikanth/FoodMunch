@@ -7,6 +7,7 @@ import { StoreContext } from "../../context/StoreContext";
 
 import "./Navbar.css";
 import { assets } from "../../assets/assets";
+import { toast } from "react-toastify";
 
 const Navbar = ({ setShowLogin }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,6 +28,7 @@ const Navbar = ({ setShowLogin }) => {
   const logout = () => {
     localStorage.removeItem("token");
     setToken("");
+    toast.success("Sucessfully Logout");
   };
 
   return (
@@ -34,7 +36,7 @@ const Navbar = ({ setShowLogin }) => {
       <Link to="/">
         <div className="food-munch-image">
           <img
-            src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/food-munch-img.png"
+            src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/food-munch-img.png"
             alt="logo"
             className="food-munch-logo"
           />

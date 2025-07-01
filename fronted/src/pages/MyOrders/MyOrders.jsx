@@ -3,6 +3,7 @@ import { StoreContext } from "../../context/StoreContext";
 import axios from "axios";
 import { assets } from "../../assets/assets";
 import "./MyOrders.css";
+import { toast } from "react-toastify";
 
 const MyOrders = () => {
   const { url, token } = useContext(StoreContext);
@@ -10,13 +11,12 @@ const MyOrders = () => {
   const [data, setData] = useState([]);
 
   const fetchOrdes = async () => {
-    const response = await axios.post(
-      url + "/api/order/userorder",
-      {},
-      { headers: { token } }
-    );
+    const response = await axios.post(url + "/api/order/userorder", {
+      headers: { token: token },
+    });
     setData(response.data.data);
     console.log(response.data);
+    toast.success("Your Order successfully placed");
   };
 
   useEffect(() => {
